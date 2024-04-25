@@ -87,7 +87,7 @@ padding-bottom: 16px;
 
 .notice-bar1{
     border-radius: 12px 0px 0px 12px;
-background-color: rgba(49, 112, 246,0.55);
+background-color: rgba(49, 112, 246,0.85);
 
 
 }
@@ -241,6 +241,10 @@ background-color: rgba(49, 112, 246,1);
 .hidden{
     display: none;
 }
+.close{
+    display: none;
+
+}
 iframe{
     width: 200px;
     height: 200px;
@@ -284,6 +288,7 @@ iframe{
     justify-content: center;
     align-items: center;
 }
+
 .body{
     color: #3170F6;
     font-size: 16px;
@@ -315,7 +320,19 @@ iframe{
     background-color: #E5E5E5;
     padding-top: 12px;
 }
-
+.instruction-title{
+    color: #3170F6;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    padding-left: 12px;
+}
+.instruction-item{
+    font-weight: 400;
+    font-size: 12px;
+    line-height:16px;
+    line-height: 24px;
+}
 .info-section{
     display: flex;
     flex-flow: column;
