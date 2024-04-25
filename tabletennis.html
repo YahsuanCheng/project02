@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <link rel="stylesheet" href="./css/style/style-instantview-badminton.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha382-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha382-p32f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp2Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO9a_n2r1lEkef2QJ3cnRmUgPySHjamHQ&callback=initMap">
+    </script>
+
+
+    <title>桌球場場地預約</title>
+    <title>Document</title>
+</head>
+<script src="https://kit.fontawesome.com/2c603a8e66.js" crossorigin="anonymous"></script>
+<body>
+<div class="wrapper">
+    <!-- 導航列 -->
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                    <a href="" class="nav-bar_link title">
+                        臺北市運動中心預約系統</a>
+                </div>
+                    <div class="col-lg-4"><a href="http://125.0.0.1:5500/%E9%81%8B%E5%8B%95%E2%B8%AD%E5%BF%83/index.html" class="nav-bar_link">
+                        <span>
+                            <i class="fa-regular fa-calendar-plus"></i>
+                        </span>預約場地</a></div>
+                    <div class="col-lg-4"><a href="" class="nav-bar_link"><span>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>關於運動中心</a></div>
+                </div>             
+            </div>
+        </div>
+        <div class="container">
+<!-- start使用教學列 -->
+            <div class="notice-sevtion">
+                        <div class="row notice-bar">
+                        <div class="col-lg-3 notice-bar1"><span>1.先選擇球場類型<span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span></span></div>
+                        <div class="col-lg-3 notice-bar2"><span>2.選擇預約日期和時間<span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span></span></div>
+                        <div class="col-lg-3 notice-bar3"><span>3.選擇預約場地<span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span></span></div>
+                        <div class="col-lg-3 notice-bar4"><span>4.確認預約<span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span></span></div>
+                    </div>
+            </div>
+<!-- end使用教學列 -->
+<!-- start運動種類列 -->
+            <div class="sport-type-bar">
+                    <div class="row sporttype-item">
+                        <div class="col-lg-2">
+                            <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/index.html">
+                                    <div class="sporttype">
+                                        <div class="row">
+                                            <span>
+                                                <i class="fa-regular  fa-shuttlecock fa-xl"></i>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                        <span class="centername ">羽球場</span>
+                                            </div>                   
+                                    </div>
+                                </a>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/tabletennis.html">
+                                <div class="sporttype">
+                                    <div class="row">
+                                            <span>
+                                                <i class=" fa-regular fa-table-tennis-paddle-ball fa-xl chosen"></i>
+                                            </span>
+                                        </div>
+                                    <div class="row">
+                                        <span class="centername chosen">桌球場</span>
+                                    </div>                   
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/basketball.html">
+                                        <div class="sporttype">
+                                        <div class="row">
+                                            <span>
+                                                <i class="fa-regular fa-basketball fa-xl"></i>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                        <span class="centername">籃球場</span>
+                                            </div>                   
+                                        </div>
+                                </a>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/golf.html">
+                                        <div class="sporttype">
+                                        <div class="row">
+                                            <span>
+                                                <i class="fa-regular fa-golf-club fa-lg"></i>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                        <span class="centername">高爾夫球</span>
+                                            </div>                   
+                                        </div>
+                                </a>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/squash.html">
+                                        <div class="sporttype">
+                                        <div class="row">
+                                            <span>
+                                                <i class="fa-regular fa-racquet fa-xl"></i>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                        <span class="centername">壁球場</span>
+                                            </div>                   
+                                        </div>
+                                </a>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/pool.html">
+                                        <div class="sporttype">
+                                        <div class="row">
+                                            <span>
+                                                <i class="fa-sharp fa-regular fa-pool-8-ball fa-xl"></i>
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                        <span class="centername">撞球場</span>
+                                            </div>                   
+                                        </div>
+                                </a>
+                        </div>
+
+                    </div>
+                    <div class="line"></div>
+<!-- Start選擇時間&日期 -->
+                    <div class="selection-section">
+                        <div class="row">
+                            <div class="col-lg-3 option">
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    選擇日期
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">2024年4月1日</a></li><li><a class="dropdown-item" href="#">2024年4月2日</a></li><li><a class="dropdown-item" href="#">2024年4月3日</a></li><li><a class="dropdown-item" href="#">2024年4月4日</a></li><li><a class="dropdown-item" href="#">2024年4月5日</a></li><li><a class="dropdown-item" href="#">2024年4月6日</a></li><li><a class="dropdown-item" href="#">2024年4月7日</a></li>
+                                    
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 option">
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    選擇時間
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">08:00-09:00</a></li><li><a class="dropdown-item" href="#">09:00-10:00</a></li><li><a class="dropdown-item" href="#">11:00-12:00</a></li><li><a class="dropdown-item" href="#">12:00-13:00</a></li><li><a class="dropdown-item" href="#">13:00-12:00</a></li><li><a class="dropdown-item" href="#">12:00-15:00</a></li>
+                                    <li><a class="dropdown-item" href="#">15:00-16:00</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- End選擇時間&日期 -->
+<!-- Start運動中心卡片 -->
+                <div class="product-card">
+                    <div class="map-section">
+                        <div class="row">
+                            <div class="col-lg-12" >
+                                <div class="map-parent">
+                                    <div class="map-nested hidden" id="mapContainer">
+                                        <button onclick="closeMap()">關閉地圖</button>
+                                        <iframe 
+                                        class="map hidden"
+                                        id="sh-map"    
+                                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.367230574682!2d121.518982!3d25.0894274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aeba751bfe3f%3A0x2d14e5058a4e56f9!2z5aOr5p6X6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1712203540074!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                        class="map hidden"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.0770992374537!2d121.5136190102618!3d25.065375836936063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9473cc4f219%3A0x242c559794b131e9!2z6Ie65YyX5biC5aSn5ZCM6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152130527!5m2!1szh-TW!2stw" 
+                                        width="600" 
+                                        height="450" 
+                                        style="border:0;" 
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        zoom="16"
+                                        id="tt-map" 
+                                        frameborder="0" 
+                                        allowfullscreen="" 
+                                        loading="lazy">
+                                    </iframe>
+                                    <iframe 
+                                    class="map hidden"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.392700623302!2d121.54317671026041!3d25.02074383873398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2f7891f2f7%3A0xc8a9c8385d06362a!2z6Ie65YyX5biC5aSn5a6J6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152252994!5m2!1szh-TW!2stw" 
+                                    width="600" 
+                                    height="450" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    zoom="16"
+                                    id="daan-map" 
+                                    frameborder="0" 
+                                    allowfullscreen="" 
+                                    loading="lazy">
+                                </iframe>
+                                <iframe 
+                                class="map hidden"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.870749111295!2d121.51688171026098!3d25.038460038020656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a975c3b64793%3A0xb32fd7574524c01!2z5Lit5q2j6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152357421!5m2!1szh-TW!2stw" 
+                                width="600" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                zoom="16"
+                                id="zhongzhan-map" 
+                                frameborder="0" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                            <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.699817066902!2d121.57015683874039!3d25.078161487606597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac64ea3c8057%3A0x5193eb407f2e483e!2z6Ie65YyX5biC5YWn5rmW6YGL5YuV5Lit5b-DIFRhaXBlaSBOZWlodSBTcG9ydHMgQ2VudGVy!5e0!3m2!1szh-TW!2stw!4v1713152400273!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="neihu-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.0911291451607!2d121.55687461025961!3d24.997019239688456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa12ca88be1b%3A0x968a4aa7268c300a!2z6Ie65YyX5biC5paH5bGx6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152459250!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="wenshan-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.56727236085!2d121.50725131026361!3d25.11650553487288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aef3c98a1ce5%3A0x529c5a9be7fbc8ad!2z6Ie65YyX5biC5YyX5oqV6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152497662!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="beitou-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.069854569697!2d121.56418771026085!3d25.03170333829291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb15aca0137%3A0x62878deca797db56!2z6Ie65YyX5biC5L-h576p6YGL5YuV5Lit5b-DVGFpcGVpIFhpbnlpIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152693753!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="xinyi-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.069854569697!2d121.56418771026085!3d25.03170333829291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb15aca0137%3A0x62878deca797db56!2z6Ie65YyX5biC5L-h576p6YGL5YuV5Lit5b-DVGFpcGVpIFhpbnlpIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152693753!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="xinyi-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5660101744984!2d121.57929471026135!3d25.04879813760418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9e29c5287b%3A0x7cf9d3e5211f9360!2z6Ie65YyX5biC5Y2X5riv6YGL5YuV5Lit5b-DIFRhaXBlaSBOYW5nYW5nIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152734135!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="nangnag-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <iframe 
+                            class="map hidden"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.605389580454!2d121.50428701026131!3d25.047462437658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90eed3714f3%3A0xac0a7a64c48fcbec!2z6Ie65YyX6JCs6I-v6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152767780!5m2!1szh-TW!2stw" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            zoom="16"
+                            id="wanhua-map" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>  
+                     <div class="card-item">
+                        <div class="row">              
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="title-sction">
+                                    <span  class="heading1">士林運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="sh-map"
+                                onclick="showMap('sh-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                </div>
+                                
+                                <div class="place-grp">
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場01</button>
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button> 
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場03</button> 
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button> 
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場05</button>
+                                </div>       
+                            </div>
+
+                            
+                        </div>      
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">大同運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="tt-map"
+                                onclick="showMap('tt-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場01</button>
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場01</button>
+                                    <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button>
+
+                                            
+                                    </div>
+                            </div>
+                            
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">大安運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="daan-map"
+                                onclick="showMap('daan-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場01</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場03</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場04</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場05</button>
+                                        
+                                            
+                                    </div>
+                            </div>  
+ 
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">中正運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="zhongzhan-map"
+                                onclick="showMap('zhongzhan-map')"   
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場A</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場B</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場C</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場D</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場E</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場F</button>
+
+
+                                            
+                                    </div>       
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">內湖運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="neihu-map"
+                                onclick="showMap('neihu-map')"  
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場01</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場03</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場05</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場06</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場07</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場09</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場09</button>
+
+
+                                            
+                                    </div>
+                            </div>   
+   
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">文山運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="wenshan-map"
+                                onclick="showMap('wenshan-map')"  
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場A</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場B</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場C</button>
+                                            
+                                    </div>
+                            </div>     
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">北投運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="beitou-map"
+                                onclick="showMap('beitou-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場01</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場02</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場03</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場04</button>
+
+
+                                    </div>
+                            </div>          
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">信義運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="xinyi-map"
+                                onclick="showMap('xinyi-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">3樓桌球場A</button>
+                                            <button type="button" class="btn btn-primary btn-sm">3樓桌球場B</button>
+                                            <button type="button" class="btn btn-primary btn-sm">3樓桌球場C</button>
+                                            
+                                    </div>
+                            </div>        
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span  class="heading1">南港運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="nangnag-map"
+                                onclick="showMap('nangnag-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場A</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場B</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場E</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場F</button>
+                                            
+                                            
+                                    </div>
+                            </div>         
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <i class="fa-regular fa-tent fa-2xl"></i>
+                            </div>
+                            <div class="col-lg-8 des">
+                                <span class="heading1">萬華運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="wanhua-map"
+                                onclick="showMap('wanhua-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                <span class="body">至少預約1小時</span>
+                                <div class="place-grp">
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場1</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場2</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場3</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場4</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場5</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場6</button>
+                                            <button type="button" class="btn btn-primary btn-sm">2樓桌球場7</button>
+
+                                            
+                                            
+                                    </div>
+                            </div>
+              
+                            </div>
+                    </div>
+                        <script>
+                            
+                            function showMap(mapId) {
+                        // 隱藏所有地圖
+                        var maps = document.querySelectorAll('.map');
+                        maps.forEach(function(map) {
+                            map.classList.add('hidden');
+                        });
+
+                        // 顯示特定地圖
+                        var targetMap = document.getElementById(mapId);
+                        if (targetMap) {
+                            targetMap.classList.remove('hidden');
+                        }
+
+                        // 顯示地圖容器
+                        var mapContainer = document.getElementById('mapContainer');
+                        mapContainer.classList.remove('hidden');
+                    }
+
+                    function closeMap() {
+                        // 隱藏地圖容器
+                        var mapContainer = document.getElementById('mapContainer');
+                        mapContainer.classList.add('hidden');
+
+                        // 隱藏所有地圖
+                        var maps = document.querySelectorAll('.map');
+                        maps.forEach(function(map) {
+                            map.classList.add('hidden');
+                        });
+                    }
+
+
+                            
+                        
+                        </script>
+                </div>
+                <!-- End運動中心卡片 -->
+            </div>
+        </div>
+</div>
+        
+<!-- 開始頁尾 -->
+<div class="page-bottom">
+    <div class="container">
+        <div class="row list">
+            <div class="col-lg-3">
+                <div class="col-lg-12 contact-item">
+                    <a href="http://125.0.0.1:5500/%E9%81%8B%E5%8B%95%E2%B8%AD%E5%BF%83/Venue-Instructions.html" class="contact-link">
+                        <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
+                        場地須知</a>
+                    </div>
+                <div class="col-lg-12 contact-item">
+                    <a href="http://125.0.0.1:5500/%E9%81%8B%E5%8B%95%E2%B8%AD%E5%BF%83/reservation-guidelines.html" class="contact-link">
+                        <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
+                        預約須知</a>
+                </div>
+                <div class="col-lg-12 contact-item">
+                    <a href="#!" class="contact-link">
+                        <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
+                        聯絡我們</a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="center-list-1">
+                    <div class="col-lg-12 contact-item">
+                        <a href="https://www.slsc-taipei.org/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            士林運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="https://www.dtsc-wdyg.com.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            大同運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://daansports.com.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            大安運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://cssc.cyc.org.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            中山運動中心</a>
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="center-list-2">
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://www.tpejjsports.com.tw/ " class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            中正運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="https://nhsc.cyc.org.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            內湖運動中心</a>
+                    </div>  
+                    <div class="col-lg-12 contact-item">
+                        <a href="https://www.facebook.com/wssc.tw" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            文山運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://www.btsport.org.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            北投運動中心</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="center-list-3">
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://sssc.com.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            松山運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="https://xysc.teamxports.com/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            信義運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://ngsc.cyc.org.tw/" class="contact-link"> 
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            南港運動中心</a>
+                    </div>
+                    <div class="col-lg-12 contact-item">
+                        <a href="http://whsc.com.tw/" class="contact-link">
+                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                            萬華運動中心</a>
+                    </div>  
+        
+                </div>
+
+            </div>
+            
+        </div>      
+    </div>
+    <p class="copyright">2022 Copyright Reserved</p>
+</div>
+
+
+<!-- 結束頁尾 -->
+
+</body>
+
+
+</html>
