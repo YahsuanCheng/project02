@@ -26,7 +26,7 @@
                     <a href="" class="nav-bar_link title">
                         臺北市運動中心預約系統</a>
                 </div>
-                    <div class="col-lg-4"><a href="" class="nav-bar_link">
+                    <div class="col-lg-4"><a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/index.html" class="nav-bar_link">
                         <span>
                             <i class="fa-regular fa-calendar-plus"></i>
                         </span>預約場地</a></div>
@@ -179,12 +179,12 @@
                         <div class="row">
                             <div class="col-lg-12" >
                                 <div class="map-parent">
-                                    <div class="map-nested">
-                                        <div class="map hidden" id="myElement">
-                                            <a href="" onclick="toggleElement()"
-                                            >關閉</a>
+                                    <div class="map-nested hidden" id="mapContainer">
+                                        <button onclick="closeMap()">關閉地圖</button>
                                             <iframe 
-                                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.367230574682!2d121.518982!3d25.0894274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aeba751bfe3f%3A0x2d14e5058a4e56f9!2z5aOr5p6X6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1712203540074!5m2!1szh-TW!2stw" 
+                                            class="map hidden"
+                                            id="sh-map"    
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.367230574682!2d121.518982!3d25.0894274!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aeba751bfe3f%3A0x2d14e5058a4e56f9!2z5aOr5p6X6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1712203540074!5m2!1szh-TW!2stw" 
                                                 width="600" 
                                                 height="450" 
                                                 style="border:0;" 
@@ -192,46 +192,199 @@
                                                 loading="lazy" 
                                                 referrerpolicy="no-referrer-when-downgrade"
                                                 zoom="16"
-                                                id="sh-map" 
+                                                 
                                                 frameborder="0" 
                                                 allowfullscreen="" 
                                                 loading="lazy">
                                             </iframe>
+                                            <iframe 
+                                                class="map hidden"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.0770992374537!2d121.5136190102618!3d25.065375836936063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9473cc4f219%3A0x242c559794b131e9!2z6Ie65YyX5biC5aSn5ZCM6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152130527!5m2!1szh-TW!2stw" 
+                                                width="600" 
+                                                height="450" 
+                                                style="border:0;" 
+                                                allowfullscreen="" 
+                                                loading="lazy" 
+                                                referrerpolicy="no-referrer-when-downgrade"
+                                                zoom="16"
+                                                id="tt-map" 
+                                                frameborder="0" 
+                                                allowfullscreen="" 
+                                                loading="lazy">
+                                            </iframe>
+                                            <iframe 
+                                                class="map hidden"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.392700623302!2d121.54317671026041!3d25.02074383873398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2f7891f2f7%3A0xc8a9c8385d06362a!2z6Ie65YyX5biC5aSn5a6J6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152252994!5m2!1szh-TW!2stw" 
+                                                width="600" 
+                                                height="450" 
+                                                style="border:0;" 
+                                                allowfullscreen="" 
+                                                loading="lazy" 
+                                                referrerpolicy="no-referrer-when-downgrade"
+                                                zoom="16"
+                                                id="daan-map" 
+                                                frameborder="0" 
+                                                allowfullscreen="" 
+                                                loading="lazy">
+                                            </iframe>
+                                            <iframe 
+                                                class="map hidden"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3876181229257!2d121.5187646102615!3d25.054848137360402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9690a6fc8cf%3A0x3fb0a1ca6174b7fe!2z6Ie65YyX5biC5Lit5bGx6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152277897!5m2!1szh-TW!2stw" 
+                                                width="600" 
+                                                height="450" 
+                                                style="border:0;" 
+                                                allowfullscreen="" 
+                                                loading="lazy" 
+                                                referrerpolicy="no-referrer-when-downgrade"
+                                                zoom="16"
+                                                id="zhongshan-map" 
+                                                frameborder="0" 
+                                                allowfullscreen="" 
+                                                loading="lazy">
+                                            </iframe>
+                                            <iframe 
+                                                class="map hidden"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.870749111295!2d121.51688171026098!3d25.038460038020656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a975c3b64793%3A0xb32fd7574524c01!2z5Lit5q2j6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152357421!5m2!1szh-TW!2stw" 
+                                                width="600" 
+                                                height="450" 
+                                                style="border:0;" 
+                                                allowfullscreen="" 
+                                                loading="lazy" 
+                                                referrerpolicy="no-referrer-when-downgrade"
+                                                zoom="16"
+                                                id="zhongzhan-map" 
+                                                frameborder="0" 
+                                                allowfullscreen="" 
+                                                loading="lazy">
+                                            </iframe>
+                                            <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.699817066902!2d121.57015683874039!3d25.078161487606597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac64ea3c8057%3A0x5193eb407f2e483e!2z6Ie65YyX5biC5YWn5rmW6YGL5YuV5Lit5b-DIFRhaXBlaSBOZWlodSBTcG9ydHMgQ2VudGVy!5e0!3m2!1szh-TW!2stw!4v1713152400273!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="neihu-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.0911291451607!2d121.55687461025961!3d24.997019239688456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa12ca88be1b%3A0x968a4aa7268c300a!2z6Ie65YyX5biC5paH5bGx6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152459250!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="wenshan-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.56727236085!2d121.50725131026361!3d25.11650553487288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aef3c98a1ce5%3A0x529c5a9be7fbc8ad!2z6Ie65YyX5biC5YyX5oqV6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152497662!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="beitou-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.069854569697!2d121.56418771026085!3d25.03170333829291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb15aca0137%3A0x62878deca797db56!2z6Ie65YyX5biC5L-h576p6YGL5YuV5Lit5b-DVGFpcGVpIFhpbnlpIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152693753!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="xinyi-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.069854569697!2d121.56418771026085!3d25.03170333829291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb15aca0137%3A0x62878deca797db56!2z6Ie65YyX5biC5L-h576p6YGL5YuV5Lit5b-DVGFpcGVpIFhpbnlpIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152693753!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="xinyi-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5660101744984!2d121.57929471026135!3d25.04879813760418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9e29c5287b%3A0x7cf9d3e5211f9360!2z6Ie65YyX5biC5Y2X5riv6YGL5YuV5Lit5b-DIFRhaXBlaSBOYW5nYW5nIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152734135!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="nangnag-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
+                                        <iframe 
+                                            class="map hidden"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.605389580454!2d121.50428701026131!3d25.047462437658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90eed3714f3%3A0xac0a7a64c48fcbec!2z6Ie65YyX6JCs6I-v6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152767780!5m2!1szh-TW!2stw" 
+                                            width="600" 
+                                            height="450" 
+                                            style="border:0;" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            zoom="16"
+                                            id="wanhua-map" 
+                                            frameborder="0" 
+                                            allowfullscreen="" 
+                                            loading="lazy">
+                                        </iframe>
                                         </div>
                                     </div>
-                                    
+                                </div>
                                 </div>
                                 
-                                <script>
-                                    function toggleElement() {
-                                        var mapContainer = document.querySelector(".map");
-                                        var closeButton = document.querySelector(".map a");
-                                
-                                        if (mapContainer.classList.contains("hidden")) {
-                                            mapContainer.classList.remove("hidden");
-                                            closeButton.classList.remove("hidden");
-                                        } else {
-                                            mapContainer.classList.add("hidden");
-                                            closeButton.classList.add("hidden");
-                                        }
-                                    }
-                                </script>
-                            </div>     
-                        </div>
-                    </div>
+
+                            </div>  
                      <span class="map-notice">點擊運動中心名稱查看地圖</span>
-                    <div class="card-item">
+                     <div class="card-item">
                         <div class="row">              
                             <div class="col-lg-1">
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8">
-                                <a href="#!" 
-                                class="heading1" 
+                                <div class="title-sction">
+                                    <span  class="heading1">士林運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="sh-map"
-                                onclick="toggleElement()"
-                                >士林運動中心</a>
+                                onclick="showMap('sh-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
+                                </div>
+                                
                                 <div class="place-grp">
                                     <button type="button" class="btn btn-primary btn-sm">7樓羽球場01</button>
                                     <button type="button" class="btn btn-primary btn-sm">7樓羽球場02</button> 
@@ -248,11 +401,12 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!" 
-                                class="heading1"
+                                <span class="heading1">大同運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="tt-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.0770992374537!2d121.5136190102618!3d25.065375836936063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9473cc4f219%3A0x242c559794b131e9!2z6Ie65YyX5biC5aSn5ZCM6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152130527!5m2!1szh-TW!2stw')"
-                                >大同運動中心</a>
+                                onclick="showMap('tt-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
+                                
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場01</button>
@@ -276,11 +430,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!" 
+                                <span class="heading1">大安運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="daan-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.392700623302!2d121.54317671026041!3d25.02074383873398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2f7891f2f7%3A0xc8a9c8385d06362a!2z6Ie65YyX5biC5aSn5a6J6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152252994!5m2!1szh-TW!2stw')"
-                                class="heading1"
-                                >大安運動中心</a>
+                                onclick="showMap('daan-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場01</button>
@@ -308,11 +462,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!" 
-                                class="heading1"
+                                <span class="heading1">中山運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="zhongshan-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3876181229257!2d121.5187646102615!3d25.054848137360402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9690a6fc8cf%3A0x3fb0a1ca6174b7fe!2z6Ie65YyX5biC5Lit5bGx6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152277897!5m2!1szh-TW!2stw')"
-                                >中山運動中心</a>
+                                onclick="showMap('zhongshan-map')"
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場A</button>
@@ -331,11 +485,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!" 
-                                class="heading1"
+                                <span class="heading1">中正運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="zhongzhan-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.870749111295!2d121.51688171026098!3d25.038460038020656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a975c3b64793%3A0xb32fd7574524c01!2z5Lit5q2j6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152357421!5m2!1szh-TW!2stw')"                                
-                                >中正運動中心</a>
+                                onclick="showMap('zhongzhan-map')"   
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                     
@@ -356,11 +510,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!" 
-                                class="heading1"
+                                <span class="heading1">內湖運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="neihu-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.699817066902!2d121.57015683874039!3d25.078161487606597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac64ea3c8057%3A0x5193eb407f2e483e!2z6Ie65YyX5biC5YWn5rmW6YGL5YuV5Lit5b-DIFRhaXBlaSBOZWlodSBTcG9ydHMgQ2VudGVy!5e0!3m2!1szh-TW!2stw!4v1713152400273!5m2!1szh-TW!2stw')"                          
-                                >內湖運動中心</a>
+                                onclick="showMap('neihu-map')"  
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場01</button>
@@ -381,11 +535,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!"
-                                class="heading1"
+                                <span class="heading1">文山運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="wenshan-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.0911291451607!2d121.55687461025961!3d24.997019239688456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa12ca88be1b%3A0x968a4aa7268c300a!2z6Ie65YyX5biC5paH5bGx6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152459250!5m2!1szh-TW!2stw')"
-                                >文山運動中心</a>
+                                onclick="showMap('wenshan-map')"  
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場A</button>
@@ -403,11 +557,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!" 
-                                class="heading1"
+                                <span class="heading1">北投運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="beitou-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.56727236085!2d121.50725131026361!3d25.11650553487288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aef3c98a1ce5%3A0x529c5a9be7fbc8ad!2z6Ie65YyX5biC5YyX5oqV6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152497662!5m2!1szh-TW!2stw')"
-                                >北投運動中心</a>
+                                onclick="showMap('beitou-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">5樓羽球場01</button>
@@ -421,11 +575,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!"
-                                class="heading1"
-                                id="beitou-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.069854569697!2d121.56418771026085!3d25.03170333829291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb15aca0137%3A0x62878deca797db56!2z6Ie65YyX5biC5L-h576p6YGL5YuV5Lit5b-DVGFpcGVpIFhpbnlpIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152693753!5m2!1szh-TW!2stw')"
-                                >信義運動中心</a>
+                                <span class="heading1">信義運動中心</span>
+                                <a href="#!" class="map-btn"
+                                id="xinyi-map"
+                                onclick="showMap('xinyi-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場A</button>
@@ -443,11 +597,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!"
-                                class="heading1"
+                                <span  class="heading1">南港運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="nangnag-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5660101744984!2d121.57929471026135!3d25.04879813760418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9e29c5287b%3A0x7cf9d3e5211f9360!2z6Ie65YyX5biC5Y2X5riv6YGL5YuV5Lit5b-DIFRhaXBlaSBOYW5nYW5nIFNwb3J0cyBDZW50ZXI!5e0!3m2!1szh-TW!2stw!4v1713152734135!5m2!1szh-TW!2stw')"
-                                >南港運動中心</a>
+                                onclick="showMap('nangnag-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場A</button>
@@ -468,11 +622,11 @@
                                 <i class="fa-regular fa-tent fa-2xl"></i>
                             </div>
                             <div class="col-lg-8 des">
-                                <a href="#!"
-                                class="heading1"
+                                <span class="heading1">萬華運動中心</span>
+                                <a href="#!" class="map-btn"
                                 id="wanhua-map"
-                                onclick="changeMapSrc('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.605389580454!2d121.50428701026131!3d25.047462437658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90eed3714f3%3A0xac0a7a64c48fcbec!2z6Ie65YyX6JCs6I-v6YGL5YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1713152767780!5m2!1szh-TW!2stw')"
-                                >萬華運動中心</a>
+                                onclick="showMap('wanhua-map')" 
+                                ><i class="fa-regular fa-map-location-dot fa-xl"></i></a>
                                 <span class="body">至少預約1小時</span>
                                 <div class="place-grp">
                                             <button type="button" class="btn btn-primary btn-sm">4樓羽球場A</button>
@@ -490,31 +644,37 @@
                     </div>
                         <script>
                             
-                            function changeMapSrc(mapSrc) {
-                                // 获取 iframe 元素
-                                var mapIframe = document.getElementById('sh-map');
-                        
-                        
-                                // 更改 iframe 的 src 属性为传递进来的地图链接
-                                mapIframe.src = mapSrc;
-                               
-                                // 将 iframe 显示出来
-                                mapIframe.style.display = "block";
-                            }
-                            function toggleMap() {
-                            var element = document.getElementById("mapContainer");
-                            var button = document.getElementById("mapButton");
+                            function showMap(mapId) {
+                        // 隱藏所有地圖
+                        var maps = document.querySelectorAll('.map');
+                        maps.forEach(function(map) {
+                            map.classList.add('hidden');
+                        });
 
-                            if (element.classList.contains("hidden")) {
-                                // 显示地图容器和按钮
-                                element.classList.remove("hidden");
-                                button.classList.remove("hidden");
-                            } else {
-                                // 隐藏地图容器和按钮
-                                element.classList.add("hidden");
-                                button.classList.add("hidden");
-                            }
+                        // 顯示特定地圖
+                        var targetMap = document.getElementById(mapId);
+                        if (targetMap) {
+                            targetMap.classList.remove('hidden');
                         }
+
+                        // 顯示地圖容器
+                        var mapContainer = document.getElementById('mapContainer');
+                        mapContainer.classList.remove('hidden');
+                    }
+
+                    function closeMap() {
+                        // 隱藏地圖容器
+                        var mapContainer = document.getElementById('mapContainer');
+                        mapContainer.classList.add('hidden');
+
+                        // 隱藏所有地圖
+                        var maps = document.querySelectorAll('.map');
+                        maps.forEach(function(map) {
+                            map.classList.add('hidden');
+                        });
+                    }
+
+
                             
                         
                         </script>
@@ -530,12 +690,12 @@
         <div class="row list">
             <div class="col-lg-3">
                 <div class="col-lg-12 contact-item">
-                    <a href="#!" class="contact-link">
+                    <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/Venue-Instructions.html" class="contact-link">
                         <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
                         場地須知</a>
                     </div>
                 <div class="col-lg-12 contact-item">
-                    <a href="#!" class="contact-link">
+                    <a href="http://127.0.0.1:5500/%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83/reservation-guidelines.html" class="contact-link">
                         <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
                         預約須知</a>
                 </div>
