@@ -91,6 +91,9 @@ background-color: rgba(49, 112, 246,0.85);
 
 
 }
+.notice-bar1.guideline{
+    border-radius: 12px 12px 12px 12px;
+}
 .notice-bar2{
 opacity: 0.9;
 background-color: rgba(49, 112, 246,0.70);
