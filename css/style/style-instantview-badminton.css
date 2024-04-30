@@ -205,16 +205,16 @@ background-color: rgba(49, 112, 246,1);
     position: relative;  
     float: right;
     width: 200px;
-    height: 1800px;
+    height: 100%;
     overflow: hidden;
-
+    border: 1px solid red;
 
 }
 
 .map-parent{
     width: 200px;
     position: relative;
-    height: 1800px;
+    height: 100%;
 
 }
 .map-nested{
