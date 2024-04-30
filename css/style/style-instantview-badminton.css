@@ -415,7 +415,7 @@ color: #3170F6;
         font-size: 12px;
     }
     .selection-section{
-        margin-left: 184px;;
+        margin-left: 80px;;
     }
     .selection-section .row{
         
@@ -427,7 +427,7 @@ color: #3170F6;
     .notice-bar3,
     .notice-bar4{
         font-size: 8px;
-        min-width: 100px;
+        min-width: 72px;
         
     }
 
@@ -450,10 +450,10 @@ color: #3170F6;
 
     }
     .sport-type-bar .col-sm-2{
-        width: 16.6666%;
+        width: 32%;
     }
     .card-item{
-        width: 576px;
+        width: 300px;
         margin-top: 0px;
     }
     .card-item i{
@@ -470,5 +470,8 @@ color: #3170F6;
     }
     .page-bottom .col-sm-3{
         width: 25%;
+    }
+    .contact-link{
+        font-size: 8px;
     }
 }
