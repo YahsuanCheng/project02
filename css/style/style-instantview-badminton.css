@@ -6,6 +6,7 @@
 a{
     text-decoration: none;
 }
+
 /* .container,
 .col-lg-1,
 .col-lg-2,
@@ -22,8 +23,10 @@ a{
 } */
 .nav-bar{
     display: flex;
+    flex-wrap: nowrap;
+    min-width: 1120px;
     height: 100%;
-    width: 100%;
+    min-width: 1296px;
     padding: 20px 80px;
     align-items: flex-start;
     gap: 240px;
@@ -50,10 +53,11 @@ a{
     flex-direction: row;
     width: 33.3333%;
 }
-.nav-bar-row:after{
+
+/* .nav-bar-row:after{
     content: '';
     float: right;
-}
+} */
 .nav-bar_link.title{
     font-family: Inter;
     font-size: 28px;
@@ -68,12 +72,14 @@ a{
     display: inline-flex;
     align-items: flex-start;
     padding-top: 40px;
+    min-width: 1296px;
     
 }
 .notice-bar1,
 .notice-bar2,
 .notice-bar3,
 .notice-bar4{
+display: block;
 opacity: 0.9;
 color: #E5E5E5;
 text-align: center;
@@ -83,6 +89,7 @@ font-style: normal;
 font-weight: 600;
 padding-top: 16px;
 padding-bottom: 16px;
+width: 324px;
 }
 
 .notice-bar1{
@@ -123,7 +130,7 @@ background-color: rgba(49, 112, 246,1);
     text-decoration: none;
     
 }
-
+ 
 .sport-type-bar{
     margin-top: 42px;
     width: 100%;
@@ -177,16 +184,22 @@ background-color: rgba(49, 112, 246,1);
 /* 選擇時間&日期 */
 .selection-section{
     /* border: 1px solid black; */
-    padding-left: 394px;
+    margin-left: 450px;
     margin-top: 24px;
 }
+
+
+
+
 .btn-outline-primary{
-    width: 164px;
+    width: 100px;
     height: 36px;
+    margin-left: 42px;
 
 }
 .option{
     text-align: center;
+    margin: 4px;
 
 }
 
@@ -196,6 +209,7 @@ background-color: rgba(49, 112, 246,1);
     margin-top: 40px;
     margin-bottom: 40px;
     height:100%;
+    width: 100%;
 
 }
 
@@ -207,7 +221,7 @@ background-color: rgba(49, 112, 246,1);
     width: 200px;
     height: 100%;
     overflow: hidden;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
@@ -258,7 +272,7 @@ iframe{
 .card-item{
     margin-top: 40px;
     height: 100%;
-    width: 800px;
+
 }
 .card-item a{
     text-decoration: none;
@@ -303,9 +317,9 @@ iframe{
     justify-content: center;
     align-items: center;
 }
-.des{
+/* .des{
     float: right;
-}
+} */
 .place-grp{
     flex-wrap: wrap;
     padding: 0px 12px 8px 12px;
@@ -385,3 +399,56 @@ color: #3170F6;
     line-height: 12px;
 }
 /* 結束頁尾 */
+
+
+/* RWD */
+
+@media (max-width: 576px) {
+    
+    .nav-bar_link.title{
+        font-size: 16px;
+    }
+    .nav-bar_link{
+        font-size: 12px;
+    }
+    .selection-section{
+        margin: 0 50%;
+    }
+    .selection-section .row{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .notice-bar1,
+    .notice-bar2,
+    .notice-bar3,
+    .notice-bar4{
+        font-size: 8px;
+        
+    }
+
+    .sporttype{
+        width: 80px;
+        height: 80px;
+        margin-left: 4px; 
+    }
+
+    .map-parent{
+        height: 2400px;
+    }
+    .sport-type-bar{
+        flex-wrap: wrap;
+    }
+    .card-item{
+        width: 200px;
+    }
+    .card-item.fa-tent{
+        opacity:0 ;
+    }
+    .heading1{
+        font-size: 16px;
+    }
+    .body{
+        font-size: 8px;
+    }
+}
