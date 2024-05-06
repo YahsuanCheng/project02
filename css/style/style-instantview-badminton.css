@@ -34,14 +34,14 @@ a{
 .nav-bar-item{
     margin:auto;
 }
-.nav-bar ul{
+.nav-bar-item ul{
     list-style: outside none none;
     margin: auto;
 }
-.nav-bar li{
+.nav-bar-item li{
     display: inline-block;
 }
-.nav-bar li a {
+.nav-bar-item li a {
     display: block;
     font-size: 18px;
     margin-right: 20px;
