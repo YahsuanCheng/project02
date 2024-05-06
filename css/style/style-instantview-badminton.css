@@ -22,15 +22,33 @@ a{
     border: 1px solid #3170F6;
 } */
 .nav-bar{
-    display: flex;
-    flex-wrap: nowrap;
+
     height: 100%;
     width: 100%;
-    padding: 20px 80px;
+    padding: 20px 40px;
     align-items: flex-start;
     gap: 240px;
     background-color: #E5E5E5;
+    margin: auto;
 }
+.nav-bar-item{
+    margin:auto;
+}
+.nav-bar ul{
+    list-style: outside none none;
+    margin: auto;
+}
+.nav-bar li{
+    display: inline-block;
+}
+.nav-bar li a {
+    display: block;
+    font-size: 18px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+
 .nav-bar .col-lg-4{
     text-align: center;
     align-content: center;
@@ -127,7 +145,7 @@ background-color: rgba(49, 112, 246,1);
 
 .col-lg-2 a{
     text-decoration: none;
-    
+    text-align: center;
 }
  
 .sport-type-bar{
@@ -140,13 +158,16 @@ background-color: rgba(49, 112, 246,1);
 }
 
 .sporttype{
+
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color:#E5E5E5;
     text-align: center;
+
     color: #C6C6C6; 
-    margin-left: 32px; 
+    margin-left: 50%; 
+    transform: translate(-50%);
 
 }
 
@@ -187,8 +208,13 @@ background-color: rgba(49, 112, 246,1);
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 24px;
     z-index: 1000;
+    
+    
+}
+.selection-section .btn{
+    margin-top: 50%;
+    transform: translate(0,-50%);
     
 }
 
@@ -198,8 +224,8 @@ background-color: rgba(49, 112, 246,1);
 .btn-outline-primary{
     width: 100%;
     height: 36px;
-    margin-left: 42px;
-
+    border: 1px solid black;
+    margin: 0 12px;
 }
 .option{
     text-align: center;
@@ -328,9 +354,10 @@ iframe{
     flex-wrap: wrap;
     padding: 0px 12px 8px 12px;
 }
-.btn{
+.place-grp .btn{
     margin: 4px;
 }
+
 
 
 /* 開始頁尾 */
@@ -409,41 +436,51 @@ color: #3170F6;
 
 @media only screen and (max-width: 768px) {
     .nav-bar .row{
-        height: 100%;
         display: flex;
         flex-wrap: nowrap;
-    }
-    .nav-bar .col-sm-4{
-        width: 33%;
+        height: 100%;
+
 
     }
-    {
-        font-size: 16px;
+    .nav-bar .col-sm-12{
+        width: 100%;
+
     }
-    .nav-bar_link.title,
-    .nav-bar_link{
-        font-size: 10px;
+    
+    .nav-bar_link.title{
+        display: none;
     }
+
+   .nav-bar li a{
+    font-size: 12px;
+   }
+
     .selection-section{
+      
         margin-left: 50%;
         transform: translate(-50%);
 
     }
     .selection-section .row{
+
          flex-wrap: nowrap;
-         
+
     }
-    .selection-section. .col-sm-1{
+    .selection-section .col-sm-1{
         width: 50%;
     }
     .selection-section .option{
-    
+        
         display: flex;
         flex-wrap: nowrap;
         margin:0;
         padding: 0;
         z-index: 400;
         width: 50%;
+
+    }
+    .selection-section .btn{
+        margin: 0;
     }
 
     .notice-bar1,
@@ -458,7 +495,7 @@ color: #3170F6;
     .sporttype{
         width: 80px;
         height: 80px;
-        margin-left: 4px; 
+ 
 
     }
 
@@ -471,17 +508,28 @@ color: #3170F6;
     .sport-type-bar{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
     }
+    .sport-type-bar .row{
+        justify-content: center ;
+        align-items: center;
+        text-align: center;
+    }
+
     .sport-type-bar .col-sm-2{
         width: 32%;
+        
+    }
+    .sport-type-bar .col-sm-2 a{
+        text-align: center;
     }
     .product-card{
         margin-left: 50%;
         transform: translate(-50%);
     }
     .card-item{
-        width: 300px;
+        width: 100%;
         margin-top: 0px;
     }
     .card-item i{
@@ -499,5 +547,10 @@ color: #3170F6;
     .page-bottom .col-sm-3{
         width: 25%;
     }
-   
+    .page-bottom .col-sm-3 .contact-item{
+        font-size: 6px;
+    }
+    .page-bottom .col-sm-3 .contact-item i{
+        display: none;
+    }
 }
