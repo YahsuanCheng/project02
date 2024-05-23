@@ -21,6 +21,43 @@ a{
 .col-lg-12{
     border: 1px solid #3170F6;
 } */
+
+.bkim_01{
+    position: absolute;
+    top:25%;
+    left: 0%;
+    height: 80vh;
+    width: 80vh;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url('/image/background_04.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -999;
+    border-radius: 50%;
+}
+.bkim_02{
+    position: absolute;
+    top:30%;
+    right: 10%;
+    height: 60vh;
+    width: 60vh;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url('/image/background_05.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -999;
+    border-radius: 50%;
+}
+.bkim_03{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    height: 80vh;
+    width: 80vh;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url('/image/background_06.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -999;
+    border-radius: 50%;
+}
 .nav-bar{
 
     height: 100%;
@@ -205,35 +242,28 @@ background-color: rgba(49, 112, 246,1);
 
 /* 選擇時間&日期 */
 .selection-section{
-    /* border: 1px solid black; */
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.option{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.dropdown_menu{
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: 1000;
-    
-    
 }
-.selection-section .btn{
-    margin-top: 50%;
-    transform: translate(0,-50%);
-    
-}
-
-
-
-
-.btn-outline-primary{
-    width: 100%;
-    height: 36px;
-    border: 1px solid black;
-    margin: 0 12px;
-}
-.option{
-    text-align: center;
-    margin: 24px;
-
-}
-
 
 /* Product Card */
 .product-card{
@@ -266,8 +296,8 @@ background-color: rgba(49, 112, 246,1);
 
     position: fixed;
 
-    width: 200px;
-    height: 240px;
+    width: 150px;
+    height: 150px;
     z-index: 999;
 }
 
@@ -294,8 +324,8 @@ background-color: rgba(49, 112, 246,1);
 
 }
 iframe{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 
 
 }
@@ -389,18 +419,32 @@ iframe{
     width: 100%;
 
 }
-.row.list a{
+
+.row.info_list .contact-link{
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5em;
+}
+.row.info_list a{
     text-decoration: none;
     color: #14213D;
     line-height: 12px;
     font-size: 12px;
 
 }
-.row.list a:hover{
+.row.info_list a:hover{
 color: #3170F6;
 
 }
+.row .info_list .col-lg-3{
+    display: flex;
+    justify-content: center;
 
+
+}
 .contact-info{
 
     color: #14213D;
@@ -414,10 +458,7 @@ color: #3170F6;
 
 
 }
-.row.list{
-    margin-top: 40px;
-    flex-wrap: nowrap;
-}
+
 
 .center-section{
     float: right;
@@ -443,44 +484,42 @@ color: #3170F6;
 
 
     }
-    .nav-bar .col-sm-12{
-        width: 100%;
-
+  
+    .nav-bar ul{
+ 
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
     }
     
     .nav-bar_link.title{
         display: none;
     }
 
-   .nav-bar li a{
-    font-size: 12px;
-   }
+    .nav-bar li a{
+        font-size: 8px;
+        margin: 0;
+    }
 
     .selection-section .btn{
       
-        margin-left: 50%;
-        transform: translate(-50%,-50%);
-        margin-top: 50%;
+        font-size: 12px;
 
     }
-    .selection-section .row{
-
-         flex-wrap: nowrap;
-
+    .selection-section{
+    position: relative;    
     }
-    .selection-section .col-sm-1{
-        width: 50%;
-    }
+
     .selection-section .option{
-        
         display: flex;
-        flex-wrap: nowrap;
-        margin:0;
-        padding: 0;
-        z-index: 400;
-        width: 50%;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+
 
     }
+
+
   
 
     .notice-bar1,
@@ -524,10 +563,10 @@ color: #3170F6;
     .sport-type-bar .col-sm-2 a{
         text-align: center;
     }
-    .product-card{
-        margin-left: 50%;
-        transform: translate(-50%);
+    .sport-type-bar .sporttype-item{
+        margin: 8px;
     }
+    
     .card-item{
         width: 100%;
         margin-top: 0px;
@@ -551,6 +590,16 @@ color: #3170F6;
         font-size: 6px;
     }
     .page-bottom .col-sm-3 .contact-item i{
+        display: none;
+    }
+    .center-list-1,
+    .center-list-2,
+    .center-list-3{
+        display:none;
+    }
+    .bkim_01,
+    .bkim_02,
+    .bkim_03{
         display: none;
     }
 }
