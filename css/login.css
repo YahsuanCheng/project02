@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    position: relative;
+    font-family: Calibri,微軟正黑體;
+}
+.heading2{
+    font-size: 24px;
+    color: #3170F6;
+    font-style: normal;
+    font-weight: 600;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+
+}
+.orderconfirm{
+    border: 1px solid rgba(78,78, 78, 0.1);
+    margin: 40px;
+    padding: 24px;
+    border-radius: 5px;
+}
+.reser__card .col-lg-12{
+
+    display: flex;
+    justify-content: space-between;
+}
+.contact__info .col-lg-6{
+
+    text-align: center;
+    padding: 32px;
+}
+
+.sign_info_item{
+    margin: 8px;
+   
+}
+.contact__info .btn{
+    margin: 20px;
+}
+.reser__card,
+.contact__info,
+.termsncondition{
+    margin: 20px 0px;
+
+}
+/* 預約人資訊 */
+.contact__name,
+.contact__phonumber{
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+    font-size: 14px;
+    font-weight:560;
+    color: #3170F6;
+    letter-spacing: 0.2em;
+
+
+}
+
+input{
+    outline-color: #3170F6;
+    border-radius: 4px;
+    border: 1px solid #C6C6C6;
+    width: 80%;
+    width: 50%;
+    margin: 12px;
+    
+
+}
+::placeholder {
+    color: #C6C6C6;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+       }
+
+/* 發票資訊 */
+.indi__invoie_1,
+.indi__invoie_2,
+.other_invoice_1,
+.other_invoice_2{
+    padding-bottom: 12px;
+    padding-top: 12px;
+    letter-spacing: 0.1em;
+}
+.invoice__info{
+    padding: 8px 12px;
+    margin: 20px 0;
+}
+.invoice__info .col-lg-6{
+    width:50%;  
+    font-size:16px;
+
+}
+.termsncondition{
+
+    padding: 8px 12px;
+}
+.btn__section{
+    display: flex;
+    justify-content: center;
+}
+
+.container .btn{
+
+    display: block;
+    width: 100%;
+    text-align: center;
+}
