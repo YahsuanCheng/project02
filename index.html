@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
     <link rel="stylesheet" href="./css/style/style-instantview-badminton.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/rellax/rellax.min.js">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO9a_n4r1lEkef2QJ3cnRmUgPySHjamHQ&callback=initMap">
     </script>
+    <script src="./css/rellax/rellax.min.js"></script>
 
 
     <title>羽球場場地預約</title>
@@ -17,26 +20,27 @@
 </head>
 <script src="https://kit.fontawesome.com/2c603a8e66.js" crossorigin="anonymous"></script>
 <body>
+    <div id="firebaseui-auth-container"></div>
 <div class="wrapper">
     <!-- 導航列 -->
-         
-            <div class="nav-bar">
-                    <div class="row">
-                        <div class="col-lg-12 col-sm-12">
-                            <div class="nav-bar-item">
-                            <ul>
-                            <li><a href="" class="nav-bar_link title">臺北市運動中心預約系統</a></li>
-                            <li><a href="./index.html" class="nav-bar_link">
-                                <span><i class="fa-regular fa-calendar-plus"></i></span>預約場地</a>
-                            </li>
-                            <li><a href="" class="nav-bar_link"><span><i class="fa-solid fa-location-dot"></i></span>關於運動中心</a></li>
-                            <li><a href="" class="nav-bar_link"><span><i class="fa-solid fa-user"></i></span>註冊/登入</a></li>
-                            
-                                </ul>
-                            </div>                           
-                        </div>
-                    </div>          
+
+    <div class="nav-bar ">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="nav-bar-item container">
+                <ul>
+                <li><a href="" class="nav-bar_link title">臺北市運動中心預約系統</a></li>
+                <li><a href="./index.html" class="nav-bar_link">
+                    <span><i class="fa-regular fa-calendar-plus"></i></span>預約場地</a>
+                </li>
+                <li><a href="" class="nav-bar_link"><span><i class="fa-solid fa-location-dot"></i></span>關於運動中心</a></li>
+                <li><a href="./login.html" class="nav-bar_link"><span><i class="fa-solid fa-user"></i></span>註冊/登入</a></li>
+                
+                    </ul>
+                </div>                           
             </div>
+        </div>          
+</div>
 
 <div class="container">
 <!-- start使用教學列 -->
@@ -151,36 +155,44 @@
                 </div>
 <!-- Start選擇時間&日期 -->
                     <div class="selection-section">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-1 option">
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-primary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    選擇日期
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">2024年4月1日</a></li><li><a class="dropdown-item" href="#">2024年4月2日</a></li><li><a class="dropdown-item" href="#">2024年4月3日</a></li><li><a class="dropdown-item" href="#">2024年4月4日</a></li><li><a class="dropdown-item" href="#">2024年4月5日</a></li><li><a class="dropdown-item" href="#">2024年4月6日</a></li><li><a class="dropdown-item" href="#">2024年4月7日</a></li>
-                                    
-                                    </ul>
+                        <div class="row option">
+                            <div class="col-lg-12 .col-sm-12">
+                                <div class="dropdown_menu">
+                                <select class="btn form-select 
+                                    btn-outline-primary" aria-label="Default select example">
+                                        <option selected>選擇日期</option>
+                                        <option value="1">2024年5月1日</option>
+                                        <option value="2">2024年5月2日</option>
+                                        <option value="3">2024年5月3日</option>
+                                        <option value="4">2024年5月4日</option>
+                                        <option value="5">2024年5月5日</option>
+                                        <option value="6">2024年5月6日</option>
+                                        <option value="7">2024年5月7日</option>
+                                      </select>
+                                      <select class="btn form-select btn-outline-primary" aria-label="Default select example">
+                                        <option selected>選擇時間</option>
+                                        <option value="1">新的-09:00</option>
+                                        <option value="2">09:00-10:00</option>
+                                        <option value="3">10:00-11:00</option>
+                                        <option value="4">11:00-12:00</option>
+                                        <option value="5">12:00-13:00</option>
+                                        <option value="6">13:00-14:00</option>
+                                        <option value="7">14:00-15:00</option>
+                                      </select>
                                 </div>
+   
                             </div>
-                            <div class="col-lg-4 col-sm-1 option">
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-primary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    選擇時間
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">08:00-09:00</a></li><li><a class="dropdown-item" href="#">09:00-10:00</a></li><li><a class="dropdown-item" href="#">11:00-12:00</a></li><li><a class="dropdown-item" href="#">12:00-13:00</a></li><li><a class="dropdown-item" href="#">13:00-14:00</a></li><li><a class="dropdown-item" href="#">14:00-15:00</a></li>
-                                    <li><a class="dropdown-item" href="#">15:00-16:00</a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
 <!-- End選擇時間&日期 -->
 
+<div class="bkim_01 rellax" data-rellax-speed="-5"></div>
+<div class="bkim_02 rellax" data-rellax-speed="2"></div>
+
 
 <!-- Start運動中心卡片 -->
-<div class="product-card">
+<div class="product-card container">
     <div class="map-section">
         <div class="row">
             <div class="col-lg-1 col-sm-12" >
@@ -672,14 +684,14 @@
             map.classList.add('hidden');
         });
     }
-
+    var rellax = new Rellax('.rellax');
 
             
         
         </script>
 </div>
 <!-- End運動中心卡片 -->
-
+<div class="bkim_03 rellax" data-rellax-speed="7"></div>
                 
             </div>
 
@@ -688,95 +700,71 @@
 <!-- 開始頁尾 -->
 <div class="page-bottom">
     <div class="container">
-        <div class="row list">
-            <div class="col-lg-3 col-sm-3">
-                <div class="col-lg-12 col-sm-12 contact-item">
-                    <a href="./Venue-Instructions.html" class="contact-link">
-                        <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
-                        場地須知</a>
-                    </div>
-                <div class="col-lg-12 contact-item">
+        <div class="row info_list">
+            <div class="col-lg-3 col-sm-12">
+                <a href="./Venue-Instructions.html" class="contact-link">
+                    <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
+                    場地須知</a>
                     <a href="./reservation-guidelines.html" class="contact-link">
                         <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
                         預約須知</a>
-                </div>
-                <div class="col-lg-12 contact-item">
-                    <a href="#!" class="contact-link">
-                        <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
-                        聯絡我們</a>
-                </div>
+                        <a href="./Venue-Instructions.html" class="contact-link">
+                            <span><i class="fa-solid fa-circle-info fa-lg"></i></span>
+                            聯絡我們</a>
             </div>
-            <div class="col-lg-3 col-sm-3">
+            <div class="col-lg-3 col-sm-3 ">
                 <div class="center-list-1">
-                    <div class="col-lg-12 col-sm-12 contact-item">
                         <a href="https://www.slsc-taipei.org/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             士林運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
+                   
                         <a href="https://www.dtsc-wdyg.com.tw/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             大同運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
+                    
                         <a href="http://daansports.com.tw/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             大安運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
                         <a href="http://cssc.cyc.org.tw/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             中山運動中心</a>
-                    </div>  
+                    
                 </div>
             </div>
             <div class="col-lg-3 col-sm-3">
                 <div class="center-list-2">
-                    <div class="col-lg-12 contact-item">
-                        <a href="http://www.tpejjsports.com.tw/ " class="contact-link">
-                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
-                            中正運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
-                        <a href="https://nhsc.cyc.org.tw/" class="contact-link">
-                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
-                            內湖運動中心</a>
-                    </div>  
-                    <div class="col-lg-12  contact-item">
-                        <a href="https://www.facebook.com/wssc.tw" class="contact-link">
-                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
-                            文山運動中心</a>
-                    </div>
-                    <div class="col-lg-12  contact-item">
-                        <a href="http://www.btsport.org.tw/" class="contact-link">
-                            <span><i class="fa-regular fa-tent fa-lg"></i></span>
-                            北投運動中心</a>
-                    </div>
+                    <a href="http://www.tpejjsports.com.tw/ " class="contact-link">
+                        <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                        中正運動中心</a>
+                    <a href="https://nhsc.cyc.org.tw/" class="contact-link">
+                        <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                        內湖運動中心</a>
+                    <a href="https://www.facebook.com/wssc.tw" class="contact-link">
+                        <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                        文山運動中心</a>
+                    <a href="http://www.btsport.org.tw/" class="contact-link">
+                        <span><i class="fa-regular fa-tent fa-lg"></i></span>
+                        北投運動中心</a>
                 </div>
+                    
+                        
+                   
+                
             </div>
             <div class="col-lg-3 col-sm-3">
                 <div class="center-list-3">
-                    <div class="col-lg-12  contact-item">
                         <a href="http://sssc.com.tw/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             松山運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
                         <a href="https://xysc.teamxports.com/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             信義運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
                         <a href="http://ngsc.cyc.org.tw/" class="contact-link"> 
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             南港運動中心</a>
-                    </div>
-                    <div class="col-lg-12 contact-item">
                         <a href="http://whsc.com.tw/" class="contact-link">
                             <span><i class="fa-regular fa-tent fa-lg"></i></span>
                             萬華運動中心</a>
-                    </div>  
-        
                 </div>
 
             </div>
@@ -788,8 +776,60 @@
 
 
 <!-- 結束頁尾 -->
+<script src="./js/all.js"></script>
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+<script>
+    
+   const firebaseApp = firebase.initializeApp({ 
+            
+            apiKey: "AIzaSyCccEAJYpOENgYunpjifpP6-6BlnN9CXlc",
+            authDomain: "one-page-ceef0.firebaseapp.com",
+            projectId: "one-page-ceef0",
+            storageBucket: "one-page-ceef0.appspot.com",
+            messagingSenderId: "594831752751",
+            appId: "1:594831752751:web:359d8014020489637290da"
+            });
+
+            // Initialize Firebase
+
+            
+            const db = firebaseApp.firestore();
+            const auth = firebaseApp.auth();
+            var ui = new firebaseui.auth.AuthUI(firebase.auth());
+            var uiConfig = {
+        
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: '/index.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+
+            ],
+            credentialHelper: firebaseui.auth.CredentialHelper.NONE,
+            // Terms of service url.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+            };
+
+            ui.start('#firebaseui-auth-container', uiConfig);
+                
+
+
+   
+
+</script>
+
+
 
 </body>
+
 
 
 </html>
