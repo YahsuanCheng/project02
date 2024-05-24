@@ -21,7 +21,7 @@ a{
 .col-lg-12{
     border: 1px solid #3170F6;
 } */
-
+/* 背景圖片 */
 .bkim_01{
     position: absolute;
     top:25%;
@@ -58,6 +58,7 @@ a{
     z-index: -999;
     border-radius: 50%;
 }
+/* 導覽列 */
 .nav-bar{
 
     height: 100%;
@@ -121,7 +122,39 @@ a{
     line-height: normal;
 
 }
+/* 登入彈跳視窗樣式 */
+.modal-dialog .modal-content{
+    background-color: rgba(255,255,255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+}
+.modal-content .modal-title.fs-5{
+    text-align: center;
+
+}
+.modal-content .modal-title.fs-5{
+    text-align: center;
+    padding: 30px;
+    color: #3170F6;
+    font-weight: 600;
+}
+.modal-content .btn-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+
+}
+.logout-success,
+.login-success{
+    display: none;
+
+}
+#loader{
+    padding: 30px;
+    text-align: center;
+    display: none;
+}
 /*  start使用教學列 */
 .notice-bar{
     display: inline-flex;
